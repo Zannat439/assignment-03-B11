@@ -4,83 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse 4 Pets</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/0a69c5ea02.js" crossorigin="anonymous"></script>
+
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                clifford: '#da373d'
+                btn-color':'#FFDC26',
+                
               }
             }
           }
         }
       </script>
     <style>
-
+        .adlam-regular {
+    font-family: "ADLaM Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    .sora-fonts {
+  font-family: "Sora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
     </style>
-
-
 </head>
-<body>
-    <nav>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
+<body class="adlam-regular container mx-auto px-6">
+    <!-- header section -->
+    <header class="bg-white">
+      <section class="flex justify-between items-center p-10  bg-[#FFF9F4]">
+        <div class="flex items-center">
+          <img class="size-8 pr-2" src="./c1-assets/logo-header.png" alt="">
+            <p class="text-2xl hidden md:block">Browse<span class="text-[#FFDC26]">4</span>Pets</p>
+        </div>
+        <div class="hidden md:flex space-x-4">
+          <nav class="space-x-6 ">
+            <a href="#" class="text-gray-700 hover:text-yellow-500">Find a pet</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-500">Breeds</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-500">Contact us</a>
+        </nav>
+        </div>
+      <div class="hidden md:flex">
+        <i class="fa-regular fa-bell pr-2 mt-3"></i>
+        <i class="fa-solid fa-magnifying-glass mt-3"></i>
+          <button class="px-4 py-2 border  border-yellow-200 pr-3 rounded-md hover:bg-gray-100">Login</button>
+          <button class="px-4 py-2 bg-yellow-500 text-black rounded-md hover:bg-yellow-600">Register</button>
+      </div>
+
+
+
+        <button class="block md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+      </button>
+      </section>
+    <section class="flex flex-col md:flex-row items-center justify-between px-10 py-20 bg-white">
+        <div class="max-w-lg">
+            <h1 class="text-4xl font-bold text-gray-900">Pamper Your Pet, <br> Because They Deserve the Best</h1>
+            <p class="text-gray-600 mt-4">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+            <button class="mt-6 px-6 py-3 bg-yellow-500 text-black rounded-lg text-lg font-medium hover:bg-yellow-600">Find a pet</button>
+        </div>
+        <div class="mt-10 md:mt-0">
+            <img src="./c1-assets/cat-big.png" alt="Cute kitten" class="rounded-lg ">
+        </div>
+    </section>
+  </header>
+
+<main>
+        <!-- browse section -->
+        <section class="p-10">
+          <div class=" lg:max-w-full mx-auto mb-24">
+            <h2 class="text-xl font-bold mb-6">Browse By Categories</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 ">
+              <!-- Dog -->
+              <div class="bg-yellow-200 rounded-md p-4 text-center shadow-md hover:shadow-lg cursor-pointer border-2 border-blue-500">
+                <div class="mb-2">
+                  
+                  <img src="./c1-assets/dog-cartoon.png" alt="Dog" class="mx-auto w-12 h-12">
                 </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Item 1</a></li>
-                  <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a>Item 3</a></li>
-                </ul>
+                <h3 class="font-semibold">Dog</h3>
+                <p class="text-gray-600 text-sm">3 items</p>
               </div>
-              <a class="btn btn-ghost text-xl">daisyUI</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                  <details>
-                    <summary>Parent</summary>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
+        
+              <!-- Fish -->
+              <div class="bg-yellow-200 rounded-lg p-4 text-center shadow-md hover:shadow-lg cursor-pointer ">
+                <div class="mb-2">
+                  <img src="./c1-assets/fish-cartoon.png" alt="Fish" class="mx-auto w-12 h-12">
+                </div>
+                <h3 class="font-semibold">Fish</h3>
+                <p class="text-gray-600 text-sm">3 items</p>
+              </div>
+        
+              <!-- Cat -->
+              <div class="bg-yellow-200 rounded-lg p-4 text-center shadow-md hover:shadow-lg cursor-pointer">
+                <div class="mb-2">
+                  <img src="./c1-assets/cat-cartoon.png" alt="Cat" class="mx-auto w-12 h-12">
+                </div>
+                <h3 class="font-semibold">Cat</h3>
+                <p class="text-gray-600 text-sm">3 items</p>
+              </div>
+        
+              <!-- Birds -->
+              <div class="bg-yellow-200 rounded-lg p-4 text-center shadow-md hover:shadow-lg cursor-pointer">
+                <div class="mb-2">
+                  <img src="./c1-assets/bird-cartoon.png" alt="Birds" class="mx-auto w-12 h-12">
+                </div>
+                <h3 class="font-semibold">Birds</h3>
+                <p class="text-gray-600 text-sm">3 items</p>
+              </div>
+        
+              <!-- Small Pet -->
+              <div class="bg-yellow-200 rounded-lg p-4 text-center shadow-md hover:shadow-lg cursor-pointer">
+                <div class="mb-2">
+                  <img src="./c1-assets/cute-pet-small.png" alt="Small Pet" class="mx-auto w-12 h-12">
+                </div>
+                <h3 class="font-semibold">Small pet</h3>
+                <p class="text-gray-600 text-sm">3 items</p>
+              </div>
+        
+              <!-- Rabbit -->
+              <div class="bg-yellow-200 rounded-lg p-4 text-center shadow-md hover:shadow-lg cursor-pointer">
+                <div class="mb-2">
+                  <img src="./c1-assets/mouse-cartoon.png" alt="Rabbit" class="mx-auto w-12 h-12">
+                </div>
+                <h3 class="font-semibold">Rabbit</h3>
+                <p class="text-gray-600 text-sm">2 items</p>
+              </div>
             </div>
           </div>
-    </nav>
-</body>
-</html>
+        </section>
+        <!-- Trending Pet Products -->
+         <section class="bg-[#FFF9F4] p-10">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 adlam-regular">Trending Pet Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Featured Product -->
+                <div class="bg-[#F9DF8A] p-6 rounded-lg shadow-md flex flex-col items-center text-center ">
+                 <div class="flex text-left relative">
+                  <div class="relative">
+                    <h3 class="text-lg font-bold mb-2 ">T-Shirt For Dogs</h3>
+                    <p class="text-sm text-gray-600 mb-4">Discover a world of treats, toys,
+                       and essentials handpicked for your pet.</p>
+                    <button class="bg-white text-black px-5 py-2 rounded-md shadow-md fonts-sora">Shop Now</button>
+                  </div>
+
+                    <div class="absolute -bottom-20 right-2 text-white p-2">
+                      <img src="./c1-assets/cute-pet-mid.png" alt="Dog T-Shirt" class="mt-4 w-32 h-32 object-cover">
+                    </div>
+                 </div>
+                </div>
+
+                <!-- Product Cards -->
+                <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- Product Card -->
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/dog-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/fish-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/bird-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/rabbit-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/bird-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/pet-couch.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/fish-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/pet-couch.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    <div class="hidden md:flex items-center justify-center h-28 gap-5 bg-white p-4 rounded-lg shadow-md text-center">
+                        <div><img src="./c1-assets/dog-cartoon.png" alt=""></div>
+                        <div><span class="text-yellow-400">&#9733; 4.5</span>
+                          <p class="font-semibold">Pet Bed</p>
+                          <p class="text-gray-600">$39.99</p></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+         </section>
+          <!-- Everyday Low Price -->
+          <section class="bg-white font-sans p-10">
+            <div class="container mx-auto p-6 ">
+              <h1 class="text-3xl font-bold mb-6 adlam-regular">Everyday Low Price</h1>
+      
+              <div class="  grid grid-cols-1 md:grid-cols-2 gap-6 ">
+                  <!-- First Card -->
+                  <div class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD]  p-6 rounded-2xl shadow-lg flex items-center">
+                      <div class="w-1/2">
+                          <h2 class="text-lg font-semibold text-black mb-2 sora-fonts">Under Price</h2>
+                          <h3 class="text-2xl font-bold text-black mb-2 adlam-regular">Pet Grooming Mitt</h3>
+                          <p class="text-white mb-4">(Easy Hair Removal)</p>
+                          <p class="text-3xl font-bold text-black">$7.99</p>
+                      </div>
+                      <div class="w-1/2">
+                          <img src="./c1-assets/cute-dog-mid.png" alt="Pet Grooming Mitt" class="rounded-lg">
+                      </div>
+                  </div>
+      
+                  <!-- Second Card -->
+                  <div class="bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] p-6 rounded-2xl shadow-lg flex items-center w-2/3">
+                      <div class="w-1/2">
+                          <h3 class="text-2xl font-bold text-gray-900 mb-4 adlam-regular">T-Shirt for Dogs</h3>
+                          <p class="text-3xl font-bold text-yellow-500">$7.99</p>
+                      </div>
+                      <div class="w-1/2">
+                          <img src="./c1-assets/cute-pet-mid.png" alt="Dog wearing T-shirt" class="rounded-lg">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          </section>
+</main>
+
+    <!-- footer section -->
+     <footer>
+      <section class="bg-white p-8 rounded-lg shadow-lg lg:max-w-6xl 
+      mx-auto mt-10 flex items-center justify-center gap-6 ">
+        <img src="./c1-assets/cute-pet-mid.png" alt="Cute dog in pajamas" class="w-32 h-40 rounded-lg">
+        <div>
+            <h2 class="text-lg font-bold">Get Pawsome News!</h2>
+            <p class="text-gray-600 text-sm">Exclusive training tips, tricks, product deals, and more.</p>
+            <div class="mt-3">
+                <div>
+                <input type="email" placeholder="Enter email..." class="p-2 border rounded w-64">
+                <button class="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded">Subscribe</button>
+            </div>
+ 
+    </section>
+
+    <section class="container mx-auto  bg-yellow-300 mt-24 p-6  text-gray-700">
+        <div class="max-w-5xl mx-auto lg:flex justify-between p-10">
+          <div>
+            <div class="lg:flex items-center">
+              <img class="size-8 pr-2" src="./c1-assets/logo-footer.png" alt="">
+              <p class="text-2xl text-black pb-2">Browse<span class="text-[yellow-500]">4</span>Pets</p>
+            </div>
+            <p class="text-sm sora-fonts text-gray-600">Discover a world of treats, 
+              toys, and <br> essentials handpicked for your furry <br>friends.</p>
+            </div>
+              
+            <div>
+                <ul class="space-y-2 text-sm sora-fonts text-gray-600">
+                    <li><a href="#" class="hover:underline">Find a pet</a></li>
+                    <li><a href="#" class="hover:underline">Breeds</a></li>
+                    <li><a href="#" class="hover:underline">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-sm sora-fonts text-gray-600">Follow Us</h4>
+                <div class="flex space-x-3 mt-2">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+   </footer>
+  </body>
+  </html>
+
+  
+
